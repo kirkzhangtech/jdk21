@@ -25,10 +25,10 @@
 
 package java.util;
 
+import java.util.function.Supplier;
+
 import jdk.internal.util.Preconditions;
 import jdk.internal.vm.annotation.ForceInline;
-
-import java.util.function.Supplier;
 
 /**
  * This class consists of {@code static} utility methods for operating
@@ -38,6 +38,17 @@ import java.util.function.Supplier;
  * objects, and checking if indexes or sub-range values are out of bounds.
  *
  * @since 1.7
+ */
+
+ /*
+  *不可继承： 当一个类被final修饰时，表示该类是最终类，不允许被其他类继承。这意味着final类的设计者不希木其他类对其进行扩展或修改，从而保护了类的完整性和稳定性。
+
+方法不可重写： 在final类中的方法默认也是final的，即不可被子类重写。这样可以避免子类修改final方法的行为，保持方法的稳定性。
+
+安全性和效率： 使用final修饰的类在某些情况下可以提高安全性和效率。因为final类不能被继承，所以在某些情况下可以避免由于继承带来的复杂性和潜在的安全问题，同时编译器在处理final类时也可以进行某些优化。
+
+设计用途明确： 将类声明为final可以明确表明该类的设计用途，即为了防止被继承和修改。这样可以使代码更加清晰和易于理解。
+
  */
 public final class Objects {
     private Objects() {

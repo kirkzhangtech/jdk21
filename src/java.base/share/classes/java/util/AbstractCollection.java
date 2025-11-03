@@ -61,7 +61,7 @@ import jdk.internal.util.ArraysSupport;
  * @see Collection
  * @since 1.2
  */
-
+// collection的更高抽象
 public abstract class AbstractCollection<E> implements Collection<E> {
     /**
      * Sole constructor.  (For invocation by subclass constructors, typically
